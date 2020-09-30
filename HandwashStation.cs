@@ -11,8 +11,8 @@ namespace Choose_Your_Class
         public int WaterLevel { get; set; } = 70;
         public int SoapLevel { get; set; } = 50;
         public int TowelQuantity { get; set; } = 100;
-        public string BlowDryer { get; set; }
         public bool HandsWet { get; set; } = false;
+        public int HandsDirty { get; set; } = 10;
         public void RunFaucets()
         {
             HandsWet = true;
@@ -22,6 +22,7 @@ namespace Choose_Your_Class
         public void PumpSoap()
         {
             SoapLevel -= 5;
+            HandsDirty -= 5;
             Console.WriteLine("Here's some soap for you! Scrub up!");
             
         }
