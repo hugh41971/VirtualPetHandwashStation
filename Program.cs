@@ -20,8 +20,8 @@ namespace Choose_Your_Class
             Console.WriteLine("6.Do nothing and live your life your way?");
 
             int response = Convert.ToInt32(Console.ReadLine());
-
-            while (true)
+            bool keepWashing = true;
+            while (keepWashing)
             {
                 if (response == 1)
                 {
